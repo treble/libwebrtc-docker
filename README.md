@@ -29,6 +29,12 @@ FROM libwebrtc:<TAG> as builder
 # profit
 ```
 
+## Features
+
+- Full `libwebrtc` source code, except `.git` folders, at `$WEBRTC_SRC_DIR` (`/webrtc/src`)
+- Built static binaries (release with symbols) at `$WEBRTC_OBJ_DIR` (`/webrtc/out/obj`)
+- Based on `debian:buster` for easy additional dependency installation
+
 ## Version support
 
 Currently we only build WebRTC release `m84` but other versions can be supported. Please file a PR or issue (noting the branch head e.g. `refs/remotes/branch-heads/4147`) if you need to build a different version.
