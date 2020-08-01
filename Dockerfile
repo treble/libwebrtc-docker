@@ -9,6 +9,7 @@ FROM debian:buster as builder
 # setup required arguments
 ARG WEBRTC_CHECKOUT
 ENV WEBRTC_CHECKOUT=$WEBRTC_CHECKOUT
+RUN echo $WEBRTC_CHECKOUT
 
 # install git, curl, gcc/g++, and python 2
 RUN apt-get update && apt-get upgrade -y && apt-get install git curl build-essential python -y
