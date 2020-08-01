@@ -9,6 +9,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 pushd $DIR
 
 # build the docker image
-docker build -t libwebrtc:$TAG --build-arg WEBRTC_CHECKOUT=$WEBRTC_CHECKOUT .
+docker build -t --rm libwebrtc:$TAG --build-arg WEBRTC_CHECKOUT=$WEBRTC_CHECKOUT .
 
 popd
